@@ -12,8 +12,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int[] arry={4,2,55,6,7,9,25,1,3};
-        Sort1 sort1 = new Sort1(arry);
-        sort1.sorting();
+//        Sort1 sort1 = new Sort1(arry);
+//        sort1.sorting();
+        Selectionsort selectionsort=new Selectionsort(arry);
+        selectionsort.sorting();
 
 
 
