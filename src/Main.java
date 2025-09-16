@@ -12,7 +12,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] arry = {4, 2, 55, 6, 7, 9, 25, 1, 3};
+//        int[] arry = {4, 2, 55, 6, 7, 9, 25, 1, 3};
         /// //////////////Sort///////////////////////
 //        Sort1 sort1 = new Sort1(arry);
 //        sort1.sorting();
@@ -41,17 +41,36 @@ public class Main {
 //       }
 
         ///  ///////ReverseString ///////////////
-        String text = "hello";
-        System.out.println("رشته اصلی: " + text);
-        System.out.println("معکوس: " + ReverseString.reverse(text));
+//        String text = "hello";
+//        System.out.println("رشته اصلی: " + text);
+//        System.out.println("معکوس: " + ReverseString.reverse(text));
 
         /// ///////////////////// TwoSumTwoPointers ////////////////////
-        int target = 9;
-        int[] result = TwoSumTwoPointers.TwoSum(arry, target);
+//        int target = 9;
+//        int[] result = TwoSumTwoPointers.TwoSum(arry, target);
+//        if (result.length > 0) {
+//            System.out.println("Numbers: " + result[0] + " , " + result[1]);
+//        } else {
+//            System.out.println("No solution found!");
+//        }
+
+        int[] numbers = {9, 1, 4, 7, 2, 6, 3};
+        int target = 10;
+
+        System.out.println("آرایه اولیه: " + Arrays.toString(numbers));
+
+        // مرحله 1: مرتب‌سازی
+        CombinedAlgorithm.quickSort(numbers, 0, numbers.length - 1);
+        System.out.println("بعد از Quick Sort: " + Arrays.toString(numbers));
+
+        // مرحله 2: Two Sum
+        int[] result = CombinedAlgorithm.twoSum(numbers, target);
+
         if (result.length > 0) {
-            System.out.println("Numbers: " + result[0] + " , " + result[1]);
+            System.out.println("اعدادی که جمعشون " + target + " میشه: " + Arrays.toString(result));
         } else {
-            System.out.println("No solution found!");
+            System.out.println("هیچ دو عددی پیدا نشد.");
         }
     }
+
 }
